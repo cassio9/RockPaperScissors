@@ -2,15 +2,19 @@ import PaperIcon from "../assets/images/icon-paper.svg";
 import ScissorsIcon from "../assets/images/icon-scissors.svg";
 import RockIcon from "../assets/images/icon-rock.svg";
 import useGameStore from "../useGameStore";
-import { useEffect } from "react";
 
 const OriginalGame = () => {
 	const setPlayerPick = useGameStore((state) => state.setPlayerPick);
 	const setComputerPickRandom = useGameStore((state) => state.setComputerPickRandom);
+	const setWinner = useGameStore((state) => state.setWinner);
 
-	useEffect(() => {
+	const setPlayerPickAndWinner = (value: string) => {
 		setComputerPickRandom();
-	}, []);
+		setPlayerPick(value);
+		setTimeout(() => {
+			setWinner();
+		}, 1000);
+	};
 
 	return (
 		<main className="w-full max-w-sm">
@@ -19,14 +23,14 @@ const OriginalGame = () => {
              h-fit  relative flex flex-col ">
 				<div className="flex justify-around -translate-y-10 ">
 					<div
-						onClick={() => setPlayerPick("Paper")}
+						onClick={() => setPlayerPickAndWinner("Paper")}
 						className="cursor-pointer bg-gradient-to-b from-PaperGradient to-PaperGradientTo rounded-full w-32 h-32 flex justify-center items-center ">
 						<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center ">
 							<img src={PaperIcon} alt="Paper Icon" />
 						</div>
 					</div>
 					<div
-						onClick={() => setPlayerPick("Scissors")}
+						onClick={() => setPlayerPickAndWinner("Scissors")}
 						className="cursor-pointer bg-gradient-to-b from-ScissorsGradient to-ScissorsGradientTo rounded-full w-32 h-32 flex justify-center items-center">
 						<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center ">
 							<img src={ScissorsIcon} alt="Scissors Icon" />
@@ -34,7 +38,7 @@ const OriginalGame = () => {
 					</div>
 				</div>
 				<div
-					onClick={() => setPlayerPick("Rock")}
+					onClick={() => setPlayerPickAndWinner("Rock")}
 					className="cursor-pointer bg-gradient-to-b from-RockGradient to-RockGradientTo rounded-full w-32 h-32 flex justify-center items-center self-center">
 					<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center">
 						<img src={RockIcon} alt="Rock Icon" />

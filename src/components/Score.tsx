@@ -3,6 +3,7 @@ import useGameStore from "../useGameStore";
 
 const Score = () => {
 	const score = useGameStore((state) => state.score);
+
 	return (
 		<header className="flex justify-between items-center border-4 border-HeaderOutline rounded-lg w-full max-w-md py-2 px-6">
 			<img className="w-[7rem]" src={Logo} alt="Rock, Paper, Scissors Logo" />

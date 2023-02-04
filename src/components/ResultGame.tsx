@@ -1,4 +1,3 @@
-import { useState } from "react";
 import useGameStore from "../useGameStore";
 
 const ResultGame = () => {

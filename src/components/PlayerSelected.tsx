@@ -9,15 +9,11 @@ const PlayerSelected = () => {
 	const playerPick = useGameStore((state) => state.playerPick);
 	const Winner = useGameStore((state) => state.Winner);
 	const computerPick = useGameStore((state) => state.computerPick);
-	const victory = useGameStore((state) => state.victory);
-	const lose = useGameStore((state) => state.lose);
-	const setWinner = useGameStore((state) => state.setWinner);
+	const changeScore = useGameStore((state) => state.changeScore);
 
 	useEffect(() => {
-		setTimeout(() => {
-			setWinner();
-		}, 2000);
-	}, [playerPick]);
+		changeScore(Winner);
+	}, [Winner]);
 
 	return (
 		<main className="w-full max-w-sm">

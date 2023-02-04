@@ -7,8 +7,7 @@ interface GameState {
 	Winner: string;
 	setWinner: () => void;
 	choices: string[];
-	victory: () => void;
-	lose: () => void;
+	changeScore: (value: string) => void;
 	setPlayerPick: (value: string) => void;
 	setComputerPickRandom: () => void;
 	setRestart: () => void;
@@ -20,8 +19,16 @@ const useGameStore = create<GameState>()((set) => ({
 	computerPick: "",
 	choices: ["Paper", "Scissors", "Rock"],
 	Winner: "",
-	victory: () => set((state) => ({ score: state.score + 1 })),
-	lose: () => set((state) => ({ score: state.score - 1 })),
+	changeScore: (value) =>
+		set((state) => {
+			if (value === "Player") {
+				return { score: state.score + 1 };
+			} else if (value === "Computer" && state.score > 0) {
+				return { score: state.score - 1 };
+			} else {
+				return { score: state.score };
+			}
+		}),
 	setPlayerPick: (value) => set({ playerPick: value }),
 	setComputerPickRandom: () =>
 		set((state) => {
