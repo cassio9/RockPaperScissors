@@ -25,6 +25,7 @@ module.exports = {
 			},
 			backgroundImage: {
 				Triangle: "url('/src/assets/images/bg-triangle.svg')",
+				Pentagon: "url('/src/assets/images/bg-pentagon.svg')",
 			},
 		},
 	},

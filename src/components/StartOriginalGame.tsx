@@ -5,11 +5,11 @@ import useGameStore from "../useGameStore";
 
 const OriginalGame = () => {
 	const setPlayerPick = useGameStore((state) => state.setPlayerPick);
-	const setComputerPickRandom = useGameStore((state) => state.setComputerPickRandom);
+	const setPcPick = useGameStore((state) => state.setComputerPickOriginalRandom);
 	const setWinner = useGameStore((state) => state.setWinner);
 
 	const setPlayerPickAndWinner = (value: string) => {
-		setComputerPickRandom();
+		setPcPick();
 		setPlayerPick(value);
 		setTimeout(() => {
 			setWinner();
@@ -17,14 +17,14 @@ const OriginalGame = () => {
 	};
 
 	return (
-		<main className="w-full max-w-sm">
+		<main className="w-ful my-16 max-w-md">
 			<div
 				className="bg-Triangle w-full mx-auto bg-center bg-[length:200px_200px] bg-no-repeat
              h-fit  relative flex flex-col ">
-				<div className="flex justify-around -translate-y-10 ">
+				<div className="flex justify-between -translate-y-10 ">
 					<div
 						onClick={() => setPlayerPickAndWinner("Paper")}
-						className="cursor-pointer bg-gradient-to-b from-PaperGradient to-PaperGradientTo rounded-full w-32 h-32 flex justify-center items-center ">
+						className="mr-16 cursor-pointer bg-gradient-to-b from-PaperGradient to-PaperGradientTo rounded-full w-32 h-32 flex justify-center items-center ">
 						<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center ">
 							<img src={PaperIcon} alt="Paper Icon" />
 						</div>

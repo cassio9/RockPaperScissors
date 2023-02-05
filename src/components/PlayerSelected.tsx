@@ -1,9 +1,6 @@
-import PaperIcon from "../assets/images/icon-paper.svg";
-import ScissorsIcon from "../assets/images/icon-scissors.svg";
-import RockIcon from "../assets/images/icon-rock.svg";
 import useGameStore from "../useGameStore";
 import { useEffect } from "react";
-import { setGradient } from "../utils";
+import { setGradient, setImage } from "../utils";
 
 const PlayerSelected = () => {
 	const playerPick = useGameStore((state) => state.playerPick);
@@ -16,7 +13,7 @@ const PlayerSelected = () => {
 	}, [Winner]);
 
 	return (
-		<main className="w-full max-w-sm">
+		<main className="w-full my-16 max-w-sm">
 			<div className="w-full mx-auto flex justify-between">
 				<div className="flex flex-col items-center gap-4">
 					<div
@@ -24,16 +21,7 @@ const PlayerSelected = () => {
 							playerPick
 						)} cursor-pointer bg-gradient-to-b  rounded-full w-32 h-32 flex justify-center items-center `}>
 						<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center ">
-							<img
-								src={
-									playerPick === "Paper"
-										? PaperIcon
-										: playerPick === "Scissors"
-										? ScissorsIcon
-										: RockIcon
-								}
-								alt={`${playerPick} Icon`}
-							/>
+							<img src={setImage(playerPick)} alt={`${playerPick} Icon`} />
 						</div>
 					</div>
 					<p className="text-white text-xl uppercase tracking-wider">You Picked</p>
@@ -45,16 +33,7 @@ const PlayerSelected = () => {
 								computerPick
 							)} cursor-pointer bg-gradient-to-b  rounded-full w-32 h-32 flex justify-center items-center `}>
 							<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center ">
-								<img
-									src={
-										computerPick === "Paper"
-											? PaperIcon
-											: computerPick === "Scissors"
-											? ScissorsIcon
-											: RockIcon
-									}
-									alt={`${computerPick} Icon`}
-								/>
+								<img src={setImage(computerPick)} alt={`${computerPick} Icon`} />
 							</div>
 						</div>
 						<p className="text-white text-xl uppercase tracking-wider">The house picked</p>
