@@ -3,7 +3,7 @@ import useGameStore from "../useGameStore";
 const GamePlay = () => {
 	const setGamePlaying = useGameStore((state) => state.setGamePlaying);
 	return (
-		<div role="button" className="flex flex-col gap-10 my-20">
+		<div className="flex flex-col gap-10 my-20">
 			<button
 				onClick={() => setGamePlaying("Original")}
 				className="hover:text-RockGradient  border-2 
