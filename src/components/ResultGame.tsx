@@ -7,7 +7,7 @@ const ResultGame = () => {
 	const result = Winner === "Player" ? "You Win" : Winner === "Computer" ? "You Lose" : "Draw";
 
 	return (
-		<section className="mb-16 flex flex-col justify-center items-center gap-4 text-white">
+		<section className="mb-5 flex flex-col justify-center items-center gap-4 text-white">
 			<h1 className="text-5xl uppercase">{result}</h1>
 			<button
 				onClick={() => restart()}

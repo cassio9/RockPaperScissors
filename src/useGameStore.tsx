@@ -9,6 +9,7 @@ interface GameState {
 	choicesOriginal: string[];
 	choicesBonus: string[];
 	Winner: string;
+	setScore: () => void;
 	changeScore: (value: string) => void;
 	setGamePlaying: (value: string) => void;
 	setPlayerPick: (value: string) => void;
@@ -28,6 +29,7 @@ const useGameStore = create<GameState>()(
 			choicesOriginal: ["Paper", "Scissors", "Rock"],
 			choicesBonus: ["Paper", "Scissors", "Rock", "Lizard", "Spock"],
 			Winner: "",
+			setScore: () => set({ score: 0 }),
 			changeScore: (value) =>
 				set((state) => {
 					if (value === "Player") {
