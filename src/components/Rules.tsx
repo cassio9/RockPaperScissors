@@ -9,7 +9,7 @@ const Rules = () => {
 	const [openRulesModal, setOpenRulesModal] = useState(false);
 
 	return (
-		<section role="contentinfo">
+		<div role="contentinfo">
 			<button
 				onClick={() => setOpenRulesModal(true)}
 				className="text-HeaderOutline border-2 border-HeaderOutline text-lg py-2 px-6 rounded-lg tracking-widest uppercase hover:text-white hover:border-white lg:absolute lg:bottom-5 lg:right-5">
@@ -27,7 +27,7 @@ const Rules = () => {
 						{gamePlaying === "Original" ? (
 							<img className="w-full max-w-sm mt-6 px-6" src={RulesOriginalImg} alt="" />
 						) : gamePlaying === "Bonus" ? (
-							<img className="w-full max-w-sm px-6 lg:px-0 " src={RulesBonusImg} alt="" />
+							<img className="w-full max-w-sm px-6 lg:px-10 lg:pb-5 " src={RulesBonusImg} alt="" />
 						) : (
 							<div className="flex flex-col items-center justify-between gap-4 md:flex-row mb-5">
 								<div className="flex flex-col items-center gap-10">
@@ -54,7 +54,7 @@ const Rules = () => {
 					</button>
 				</div>
 			)}
-		</section>
+		</div>
 	);
 };
 
