@@ -16,7 +16,7 @@ function App() {
 
 	console.log(state);
 	return (
-		<div className="font-Barlow bg-gradient-to-b from-RadialGradient to-RadialGradientTo max-h-fit min-h-screen flex flex-col items-center p-4 justify-between relative">
+		<main className="font-Barlow bg-gradient-to-b from-RadialGradient to-RadialGradientTo max-h-fit min-h-screen flex flex-col items-center p-4 justify-between relative">
 			<Score />
 			{gamePlaying ? "" : <GamePlay />}
 			{gamePlaying == "Original" ? (
@@ -35,7 +35,7 @@ function App() {
 				""
 			)}
 			<Rules />
-		</div>
+		</main>
 	);
 }
 

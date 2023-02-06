@@ -9,7 +9,7 @@ const Rules = () => {
 	const [openRulesModal, setOpenRulesModal] = useState(false);
 
 	return (
-		<section className="">
+		<section role="tooltip">
 			<button
 				onClick={() => setOpenRulesModal(true)}
 				className="text-HeaderOutline border-2 border-HeaderOutline text-lg py-2 px-6 rounded-lg tracking-widest uppercase hover:text-white hover:border-white lg:absolute lg:bottom-5 lg:right-5">
