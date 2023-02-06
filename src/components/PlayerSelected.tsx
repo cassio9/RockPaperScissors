@@ -18,10 +18,9 @@ const PlayerSelected = () => {
 			<div className="w-full flex items-center justify-between flex-wrap">
 				<div className="flex flex-col items-center gap-4 px-4">
 					<div
-						className={`${setGradient(
-							playerPick
-						)} cursor-pointer bg-gradient-to-b  rounded-full w-32 h-32 lg:w-48 lg:h-48  flex justify-center items-center `}>
-						<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center ">
+						className={`${setGradient(playerPick)} ${Winner == "Player" && "shadow-Winner"} 
+						cursor-pointer bg-gradient-to-b  rounded-full w-32 h-32 lg:w-48 lg:h-48  flex justify-center items-center `}>
+						<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center shadow-ShadowInner ">
 							<img className="lg:scale-125" src={setImage(playerPick)} alt={`${playerPick} Icon`} />
 						</div>
 					</div>
@@ -30,10 +29,9 @@ const PlayerSelected = () => {
 				{Winner ? (
 					<div className="flex flex-col gap-4 items-center px-4 lg:order-3">
 						<div
-							className={`${setGradient(
-								computerPick
-							)} cursor-pointer bg-gradient-to-b  rounded-full w-32 h-32 lg:w-48 lg:h-48  flex justify-center items-center `}>
-							<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center ">
+							className={`${setGradient(computerPick)} ${Winner == "Computer" && "shadow-Winner"} 
+							cursor-pointer bg-gradient-to-b  rounded-full w-32 h-32 lg:w-48 lg:h-48  flex justify-center items-center `}>
+							<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center shadow-ShadowInner ">
 								<img
 									className="lg:scale-125"
 									src={setImage(computerPick)}

@@ -8,19 +8,19 @@ export const setGradient = (value: string) => {
 	let result;
 	switch (value) {
 		case "Paper":
-			result = "from-PaperGradient to-PaperGradientTo";
+			result = "from-PaperGradient to-PaperGradientTo shadow-ShadowPaper";
 			break;
 		case "Scissors":
-			result = "from-ScissorsGradient to-ScissorsGradientTo";
+			result = "from-ScissorsGradient to-ScissorsGradientTo shadow-ShadowScissors";
 			break;
 		case "Rock":
-			result = "from-RockGradient to-RockGradientTo";
+			result = "from-RockGradient to-RockGradientTo shadow-ShadowRock";
 			break;
 		case "Lizard":
-			result = "from-LizardGradient to-LizardGradientTo";
+			result = "from-LizardGradient to-LizardGradientTo shadow-ShadowLizard";
 			break;
 		case "Spock":
-			result = "from-Cyan to-CyanTo";
+			result = "from-Cyan to-CyanTo shadow-ShadowSpock";
 			break;
 		default:
 			break;

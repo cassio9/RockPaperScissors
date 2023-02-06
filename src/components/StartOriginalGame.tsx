@@ -24,23 +24,23 @@ const OriginalGame = () => {
 				<div className="flex justify-between -translate-y-10 ">
 					<div
 						onClick={() => setPlayerPickAndWinner("Paper")}
-						className="mr-16 cursor-pointer bg-gradient-to-b from-PaperGradient to-PaperGradientTo rounded-full w-32 h-32 lg:w-44 lg:h-44 flex justify-center items-center ">
-						<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center">
-							<img className="lg:scale-150" src={PaperIcon} alt="Paper Icon" />
+						className=" mr-16 cursor-pointer bg-gradient-to-b from-PaperGradient to-PaperGradientTo rounded-full w-32 h-32 lg:w-44 lg:h-44 flex justify-center items-center shadow-ShadowPaper">
+						<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center shadow-ShadowInner">
+							<img className="lg:scale-150 " src={PaperIcon} alt="Paper Icon" />
 						</div>
 					</div>
 					<div
 						onClick={() => setPlayerPickAndWinner("Scissors")}
-						className="cursor-pointer bg-gradient-to-b from-ScissorsGradient to-ScissorsGradientTo rounded-full w-32 h-32 lg:w-44 lg:h-44 flex justify-center items-center">
-						<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center ">
+						className="cursor-pointer bg-gradient-to-b from-ScissorsGradient to-ScissorsGradientTo rounded-full w-32 h-32 lg:w-44 lg:h-44 flex justify-center items-center shadow-ShadowScissors">
+						<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center shadow-ShadowInner">
 							<img className="lg:scale-150" src={ScissorsIcon} alt="Scissors Icon" />
 						</div>
 					</div>
 				</div>
 				<div
 					onClick={() => setPlayerPickAndWinner("Rock")}
-					className="cursor-pointer bg-gradient-to-b from-RockGradient to-RockGradientTo rounded-full w-32 h-32 lg:w-44 lg:h-44 flex justify-center items-center self-center">
-					<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center">
+					className="cursor-pointer bg-gradient-to-b from-RockGradient to-RockGradientTo rounded-full w-32 h-32 lg:w-44 lg:h-44 flex justify-center items-center self-center shadow-ShadowRock">
+					<div className="bg-gray-200 rounded-full w-[80%] h-[80%]  flex justify-center items-center shadow-ShadowInner">
 						<img className="lg:scale-150" src={RockIcon} alt="Rock Icon" />
 					</div>
 				</div>

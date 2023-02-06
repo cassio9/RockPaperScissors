@@ -9,7 +9,7 @@ const Score = () => {
 	const setScore = useGameStore((state) => state.setScore);
 
 	return (
-		<header className="flex justify-between items-center border-4 border-HeaderOutline rounded-lg w-full max-w-md py-2 lg:py-4 px-6 lg:max-w-2xl">
+		<header className="flex justify-between items-center border-4 border-HeaderOutline rounded-lg w-full max-w-md py-2 lg:py-4 px-6 lg:max-w-2xl z-10 bg-RadialGradient">
 			<img
 				className="w-[6rem]"
 				src={gamePlaying == "Original" ? Logo : LogoBonus}

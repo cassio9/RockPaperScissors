@@ -27,6 +27,17 @@ module.exports = {
 				Triangle: "url('/src/assets/images/bg-triangle.svg')",
 				Pentagon: "url('/src/assets/images/bg-pentagon.svg')",
 			},
+			dropShadow: {},
+			boxShadow: {
+				ShadowScissors: "inset 0px -5px hsl(39, 89%, 40%)",
+				ShadowPaper: "inset 0px -5px hsl(230, 89%, 52%)",
+				ShadowRock: "inset 0px -5px hsl(349, 71%, 45%)",
+				ShadowLizard: "inset 0px -5px hsl(261, 73%, 40%)",
+				ShadowSpock: "inset 0px -5px hsl(189, 59%, 43%)",
+				ShadowInner: "inset 0px 5px rgb(216, 211, 211)",
+				Winner:
+					"0px 0px 0px 1rem rgba(31,55,86,0.8), 0px 0px 0px 3rem rgba(31,55,86,0.6), 0px 0px 0px 5rem rgba(31,55,86,0.4), 0px 0px 0px 7rem rgba(31,55,86,0.2)",
+			},
 		},
 	},
 	plugins: [],
